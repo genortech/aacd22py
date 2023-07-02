@@ -16,9 +16,13 @@ for calorie in data:
         count += int(calorie)
 
     if count > max:
+        max3 = max2
+        max2 =  max
         max = count
+
     #PART TWO
     elif count > max2:
+        max3 = max2
         max2 = count
     elif count > max3:
         max3 = count
