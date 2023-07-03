@@ -31,7 +31,7 @@ with open("input.txt", 'r') as data:
 
 # print ("player one", player_one)
 # print ("player two", player_two)
-
+    #Part One
     for item , item1 in zip(player_one, player_two):
         # print(f'Item 1: {item}', f'Item 2: {item1}')
 
@@ -54,4 +54,31 @@ with open("input.txt", 'r') as data:
         if item == 'C' and item1 =='Z':
             player_two_score += 3 + 3
 
-    print("player two score", player_two_score)
+    print("player two score old", player_two_score)
+    #Part Two
+    #X must loose
+    #Y must draw
+    # must win
+
+    player_two_score = 0
+    for item , item1 in zip(player_one, player_two):
+
+        if item =='A' and item1 =='X':
+            player_two_score += 3
+        if item =='A' and item1 =='Y':
+            player_two_score += 1 + 3
+        if item == 'A' and item1 =='Z':
+            player_two_score += 2 + 6
+        if item =='B' and item1 =='X':
+            player_two_score += 1
+        if item =='B' and item1 =='Y':
+            player_two_score += 2 + 3
+        if item == 'B' and item1 =='Z':
+            player_two_score += 3 + 6
+        if item =='C' and item1 =='X':
+            player_two_score += 2
+        if item =='C' and item1 =='Y':
+            player_two_score += 3 + 3
+        if item == 'C' and item1 =='Z':
+            player_two_score += 1 + 6
+    print("player two score new", player_two_score)
