@@ -1,35 +1,35 @@
-f = open('input.txt', 'r')
+f = open("input.txt", "r")
 
 # print (f)
 # print (f.read())
 data = f.read().splitlines()
 # print (data)
 # PART ONE
-max = 0
-max2 = 0
-max3 = 0
+maximum = 0
+maximum2 = 0
+maximum3 = 0
 count = 0
 for calorie in data:
-    if calorie == '':
+    if calorie == "":
         count = 0
     else:
         count += int(calorie)
 
-    if count > max:
-        max3 = max2
-        max2 =  max
-        max = count
+    if count > maximum:
+        maximum3 = maximum2
+        maximum2 = maximum
+        maximum = count
 
-    #PART TWO
-    elif count > max2:
-        max3 = max2
-        max2 = count
-    elif count > max3:
-        max3 = count
+    # PART TWO
+    elif count > maximum2:
+        maximum3 = maximum2
+        maximum2 = count
+    elif count > maximum3:
+        maximum3 = count
 
 
-print (max)
-print (max2)
-print (max3)
+print(maximum)
+print(maximum2)
+print(maximum3)
 
-print (max+max2+max3)
+print(maximum + maximum2 + maximum3)
