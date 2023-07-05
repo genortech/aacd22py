@@ -1,8 +1,9 @@
 
 with open("input.txt", 'r') as data:
-    pairs = data.read().split("\n")
+    pairs = data.read().strip().split("\n")
 
-pairs = 0
+count = 0
+count1 = 0
 for section in pairs:
     print(section)
     section1, section2 = section.split(',')
@@ -20,17 +21,10 @@ for section in pairs:
 
     print (count)
 
+# Part two
+
+    if section1[0] <= section2[1] and section2[0] <= section1[1]:
+        count1 +=1
 
 
-
-#first attempt tested
-# test_pairs = pairs[0:3]
-    # for test_pair_ in test_pairs:
-    #     print(test_pair_)
-    #     pair = test_pair_.split(",")
-    #     print(pair)
-    #     for pair_ in pair:
-    #         sections = pair_.split("-")
-    #         print(sections)
-    #         item.extend(iter(sections))]
-    #         print("item",item)
+    print(count1)
